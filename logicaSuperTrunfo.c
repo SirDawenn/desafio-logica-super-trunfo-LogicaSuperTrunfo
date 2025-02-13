@@ -2,7 +2,8 @@
 #include <string.h>
 #include <ctype.h>
 
-typedef struct {
+typedef struct
+{
     char state;
     char code[4];
     char name[30];
@@ -12,19 +13,23 @@ typedef struct {
     int touristicPoints;
 } Card;
 
-int isValidCityCode(char state, const char *code) {
+int isValidCityCode(char state, const char *code)
+{
     return (code[0] == state && isdigit(code[1]) && isdigit(code[2]) &&
             ((code[1] - '0') * 10 + (code[2] - '0') >= 1 && (code[1] - '0') * 10 + (code[2] - '0') <= 4));
 }
 
-void registerCard(Card *card) {
-    do {
+void registerCard(Card *card)
+{
+    do
+    {
         printf("Digite a letra do estado (A-H): ");
         scanf(" %c", &card->state);
         card->state = toupper(card->state);
     } while (card->state < 'A' || card->state > 'H');
 
-    do {
+    do
+    {
         printf("Digite o codigo da cidade (ex: A01, B02): ");
         scanf("%s", card->code);
     } while (!isValidCityCode(card->state, card->code));
@@ -47,7 +52,8 @@ void registerCard(Card *card) {
     scanf("%d", &card->touristicPoints);
 }
 
-void showCard(const Card *card) {
+void showCard(const Card *card)
+{
     printf("\n--- Informacoes da Cidade ---\n");
     printf("Estado: %c\n", card->state);
     printf("Codigo: %s\n", card->code);
@@ -58,22 +64,33 @@ void showCard(const Card *card) {
     printf("Pontos turisticos: %d\n", card->touristicPoints);
 }
 
-float calculatePopulationalDensity(const Card *card) {
+float calculatePopulationalDensity(const Card *card)
+{
     return (card->areakm2 == 0) ? 0 : (card->population / card->areakm2);
 }
 
-float getValue(const Card *c, int ch, int *rev) {
-    switch (ch) {
-        case 1: return c->population;
-        case 2: return c->areakm2;
-        case 3: return c->PIB;
-        case 4: return c->touristicPoints;
-        case 5: *rev = 1; return calculatePopulationalDensity(c);
-        default: return 0;
+float getValue(const Card *c, int ch, int *rev)
+{
+    switch (ch)
+    {
+    case 1:
+        return c->population;
+    case 2:
+        return c->areakm2;
+    case 3:
+        return c->PIB;
+    case 4:
+        return c->touristicPoints;
+    case 5:
+        *rev = 1;
+        return calculatePopulationalDensity(c);
+    default:
+        return 0;
     }
 }
 
-void compareCards(const Card *card1, const Card *card2) {
+void compareCards(const Card *card1, const Card *card2)
+{
     int choice1, choice2, reverse1 = 0, reverse2 = 0;
     float value1_1, value1_2, value2_1, value2_2;
 
@@ -86,8 +103,10 @@ void compareCards(const Card *card1, const Card *card2) {
     value1_2 = getValue(card1, choice2, &reverse2);
     value2_2 = getValue(card2, choice2, &reverse2);
 
-    int result1 = (value1_1 > value2_1) ? (!reverse1) : (value1_1 < value2_1) ? reverse1 : 0;
-    int result2 = (value1_2 > value2_2) ? (!reverse2) : (value1_2 < value2_2) ? reverse2 : 0;
+    int result1 = (value1_1 > value2_1) ? (!reverse1) : (value1_1 < value2_1) ? reverse1
+                                                                              : 0;
+    int result2 = (value1_2 > value2_2) ? (!reverse2) : (value1_2 < value2_2) ? reverse2
+                                                                              : 0;
 
     printf("\n--- Resultado da Comparacao ---\n");
     if (result1 && result2)
@@ -98,7 +117,8 @@ void compareCards(const Card *card1, const Card *card2) {
         printf("Empate! Cada cidade venceu em um criterio.\n");
 }
 
-void initSuperTrunfo() {
+void initSuperTrunfo()
+{
     Card city1, city2;
     printf("Registro da primeira cidade:\n");
     registerCard(&city1);
@@ -111,10 +131,12 @@ void initSuperTrunfo() {
     compareCards(&city1, &city2);
 }
 
-int main() {
+int main()
+{
     char running[10] = "sim";
 
-    while (strcmp(running, "sim") == 0) {
+    while (strcmp(running, "sim") == 0)
+    {
         initSuperTrunfo();
         printf("\nDeseja continuar? (sim/nao)\n");
         scanf("%9s", running);
