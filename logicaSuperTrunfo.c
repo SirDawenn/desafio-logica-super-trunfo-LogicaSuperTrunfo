@@ -101,7 +101,7 @@ int main() {
 
         case '1':
             printf("Atributo escolhido: População\n");
-            printf("%s: \t%u - %u\t :%s\n", nome_cidade1, pop_cidade1, pop_cidade2, nome_cidade2);
+            printf("%s - \t%u - %u\t - %s\n", nome_cidade1, pop_cidade1, pop_cidade2, nome_cidade2);
             
             // compara a população das cartas e exibe o vencedor na tela
             if(pop_cidade1 > pop_cidade2)
@@ -120,7 +120,7 @@ int main() {
 
         case '2':
             printf("Atributo escolhido: Pib\n");
-            printf("%s: \t%f - %f\t :%s\n", nome_cidade1, pib_cidade1, pib_cidade2, nome_cidade2);
+            printf("%s - \t%f - %f\t - %s\n", nome_cidade1, pib_cidade1, pib_cidade2, nome_cidade2);
             
             // compara o pib das cartas e exibe o vencedor na tela
             if(pib_cidade1 > pib_cidade2)
@@ -139,7 +139,7 @@ int main() {
 
         case '3':
             printf("Atributo escolhido: Área\n");
-            printf("%s: \t%f - %f\t :%s\n", nome_cidade1, area_cidade1, area_cidade2, nome_cidade2);
+            printf("%s - \t%f - %f\t - %s\n", nome_cidade1, area_cidade1, area_cidade2, nome_cidade2);
             
             // compara a area das cartas e exibe o vencedor na tela
             if(area_cidade1 > area_cidade2)
@@ -158,7 +158,7 @@ int main() {
 
         case '4':
             printf("Atributo escolhido: Densidade Populacional\n");
-            printf("%s: \t%f - %f\t :%s\n", nome_cidade1, densidadePop_cidade1, densidadePop_cidade2, nome_cidade2);
+            printf("%s - \t%f - %f\t - %s\n", nome_cidade1, densidadePop_cidade1, densidadePop_cidade2, nome_cidade2);
             
             // compara a densidade populacional das cartas e exibe o vencedor na tela
             if(densidadePop_cidade1 < densidadePop_cidade2)
@@ -177,7 +177,7 @@ int main() {
 
         case '5':
             printf("Atributo escolhido: Pib Per Capta\n");
-            printf("%s: \t%f - %f\t :%s\n", nome_cidade1, pibPerCapta_cidade1, pibPerCapta_cidade2, nome_cidade2);
+            printf("%s - \t%f - %f\t - %s\n", nome_cidade1, pibPerCapta_cidade1, pibPerCapta_cidade2, nome_cidade2);
             
             // compara o pib per capta das cartas e exibe o vencedor na tela
             if(pibPerCapta_cidade1 > pibPerCapta_cidade2)
@@ -196,7 +196,7 @@ int main() {
 
         case '6':
             printf("Atributo escolhido: Pontos Turisticos\n");
-            printf("%s: \t%u - %u\t :%s\n", nome_cidade1, pontosTuristicos_cidade1, pontosTuristicos_cidade2, nome_cidade2);
+            printf("%s - \t%u - %u\t - %s\n", nome_cidade1, pontosTuristicos_cidade1, pontosTuristicos_cidade2, nome_cidade2);
             
             // compara o pib per capta das cartas e exibe o vencedor na tela
             if(pontosTuristicos_cidade1 > pontosTuristicos_cidade2)
@@ -214,7 +214,7 @@ int main() {
         break;
 
         default:
-            printf("Opção Invalida");
+            printf("Opção Invalida\n");
             return 1;
     }
 
