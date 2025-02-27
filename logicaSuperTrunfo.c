@@ -39,5 +39,25 @@ int main() {
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
+    char cidade1, cidade2; //servirá para código futuro
+    
+    int populacao1, populacao2;
+ 
+        printf("          ***Inserção Comparativa*** \n");
+        printf ("Olá jogador! Insira a seguir os dados das cartas\n");
+        printf ("Insira a popualação da carta 1 \n");
+            scanf ("%d", &populacao1);
+        printf("Insira a popualação da carta 2\n");
+            scanf ("%d", &populacao2);
+
+        if (populacao1 > populacao2){
+            printf (" A carta 1 tem maior população\n");
+        }else{
+            printf ("A carta 2 tem maior população\n");
+        }
+        //atribuição do código da carta ao resultado, usarei posteriormente
+      //   char *SP_vencedor[2] = {codigo_carta2, codigo_carta};
+      //  char *vencedor = SP_vencedor[SpCarta1 > SpCarta2];
+      //  printf("O código da carta vencedora é: %s\n", vencedor); 
     return 0;
 }
