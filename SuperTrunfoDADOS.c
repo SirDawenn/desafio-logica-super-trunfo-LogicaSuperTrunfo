@@ -151,6 +151,6 @@ int main() {
 
             char *SP_vencedor[2] = {codigo_carta2, codigo_carta};
             char *vencedor = SP_vencedor[SpCarta1 > SpCarta2];
-            printf("O código da carta vencedora é: %s\n", vencedor);    
+            printf("O código da carta com maior super poder é: %s\n", vencedor);    
     return 0;   
 }
