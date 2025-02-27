@@ -170,13 +170,45 @@ int main() {
         // comparação dos valores e retorno do vencedor
 
             char *SP_vencedor[2] = {codigo_carta2, codigo_carta};
-             char *vencedor = SP_vencedor[SpCarta1 > SpCarta2];
+            char *vencedor = SP_vencedor[SpCarta1 > SpCarta2];
+                printf("O código da carta com maior super poder é: %s\n", vencedor);    
+                
+            //A seguir comparações de quais o vencedor dentre os dados das cartas
 
-                 printf("O código da carta com maior super poder é: %s\n", vencedor);    
+            printf("A seguir vamos mostrar a comparação de todos os dados inseridos e qual o vencedor\n");
+            printf("De acordo com cada categoria\n");
+            
                 if (Populacao > Populacao2){
-                     printf (" A carta 1 tem maior população\n");
+                    printf (" A carta 1 tem maior população\n");
                 }else{
-                     printf ("A carta 2 tem maior população\n");}
-return 0;
+                    printf ("A carta 2 tem maior população\n");}
+                
+                if (Area > Area2){
+                    printf (" A carta 1 tem maior KM² de área\n");
+                }else{
+                    printf ("A carta 2 tem maior KM² de área\n");}
+
+                if (PIB > PIB2){
+                    printf (" A carta 1 tem maior PIB\n");
+                }else{
+                    printf ("A carta 2 tem maior PIB\n");}
+
+                if (Numero_de_pontos_turisticos > Numero_de_pontos_turisticos2){
+                    printf (" A carta 1 tem mais pontos turisticos\n");
+                }else{
+                    printf ("A carta 2 tem mais pontos turisticos\n");}
+                
+                if(PIBperCapita1>PIBperCapita2){
+                    printf("A carta 1 tem PIB per capita maior\n");
+                }else{
+                    printf("A carta 2 tem maior PIB per capita\n");
+                }
+                
+                if(densidade1 < densidade2){
+                    printf("A carta 1 tem menor densidade populacional\n");
+                }else
+                    printf("A carta 2 tem menor densidade populacional\n");
+                    
+    return 0;
 }
 
