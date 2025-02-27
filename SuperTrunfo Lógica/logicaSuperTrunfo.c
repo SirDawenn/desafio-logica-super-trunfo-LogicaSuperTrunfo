@@ -179,22 +179,22 @@ int main() {
             printf("De acordo com cada categoria\n");
             
                 if (Populacao > Populacao2){
-                    printf (" A carta 1 tem maior população\n");
+                    printf ("A carta 1 tem maior população\n");
                 }else{
                     printf ("A carta 2 tem maior população\n");}
                 
                 if (Area > Area2){
-                    printf (" A carta 1 tem maior KM² de área\n");
+                    printf ("A carta 1 tem maior KM² de área\n");
                 }else{
                     printf ("A carta 2 tem maior KM² de área\n");}
 
                 if (PIB > PIB2){
-                    printf (" A carta 1 tem maior PIB\n");
+                    printf ("A carta 1 tem maior PIB\n");
                 }else{
                     printf ("A carta 2 tem maior PIB\n");}
 
                 if (Numero_de_pontos_turisticos > Numero_de_pontos_turisticos2){
-                    printf (" A carta 1 tem mais pontos turisticos\n");
+                    printf ("A carta 1 tem mais pontos turisticos\n");
                 }else{
                     printf ("A carta 2 tem mais pontos turisticos\n");}
                 
