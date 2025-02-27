@@ -1,4 +1,8 @@
 #include <stdio.h>
+// finalização do código commit 27/02/2025 16:25
+// Nível Novato: Comparando dados inseridos com IF
+// Feito por André Massaud
+
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
