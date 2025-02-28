@@ -57,14 +57,21 @@ int main() {
 
     //Variáveis das opções do menu
     int opcao1;
-    printf("Olá, jogador! Neste jogo você precisará inserir dados de duas cartas \n");
-    printf("Depois de inserir os dados, vamos apresentar ambas inserções\n");
-    printf("E mostraremos o pib per capita e densidade populacional\n");
+    printf("Menu Principal\n");
+    printf("1. Iniciar Jogo\n");
+    printf("2. Ver Regras\n");
+    printf("3. Sair\n");
+    printf("Escolha uma opção: \n");
+    scanf("%d", &opcao1);
         switch (opcao1) {
+
             case 1:
                 printf("Iniciando o jogo...\n");
-                printf("Introduza os dados da carta 1 a seguir:\n");
+                printf("Olá, jogador. Iremos realizar primeiro a inserção de dados das 2 cartas");
 
+                printf("Introduza os dados da carta 1 a seguir:\n");
+                //carta1
+            
                 printf("Sigla do Estado da cidade (Duas letras): \n");
                 scanf ("%2s", Estado);
     
@@ -86,9 +93,9 @@ int main() {
                 printf("Introduza o número de pontos turísticos: \n");
                 scanf("%d", &Numero_de_pontos_turisticos);
     
-            //carta 2
+                 //carta 2
     
-            printf("Introduza os dados da carta 2 a seguir:\n");
+                printf("Introduza os dados da carta 2 a seguir:\n");
     
                 printf("Sigla do Estado da cidade (Duas letras): \n");
                 scanf ("%2s", Estado2);
@@ -165,8 +172,6 @@ int main() {
                  printf("O Super Poder total da Carta 1 é: %.2f\n", SpCarta1);
                  printf("O Super Poder total da Carta 2 é: %.2f\n", SpCarta2);
     
-                 printf("           ***E O VENCEDOR É***\n");
-    
             // comparação dos valores e retorno do vencedor
     
                 char *SP_vencedor[2] = {codigo_carta2, codigo_carta};
@@ -220,18 +225,15 @@ int main() {
                 printf("A próxima deve ser a inicial e 03, e assim por diante!\n");
                 printf("A segunda regra é: Esteja atualizado com os dados da cidade de acordo com o IBGE\n");
                 printf("Não minta nos dados!\n");
-
-                break;
+                 break;
+    
             case 3:
                 printf("Saindo...\n");
                 break;
             default:
-                 printf("Opção inválida. Tente novamente.\n");
-
-        // Introdução de dados das cartas
-        //carta 1
-
-                    
+                printf("Opção inválida. Tente novamente.\n");
+        }
+                
  return 0;
 }
 
