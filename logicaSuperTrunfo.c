@@ -116,18 +116,28 @@ int main(){
     switch (primeiroAtributo){
         case 1:
             resultado1 = populacao1 > populacao2 ? 1 : 0;
+            printf("O primeiro atributo escolhido foi [POPULAÇÃO]");
+            printf("\n");
             break;
         case 2:
             resultado1 = area1 > area2 ? 1 : 0;
+            printf("O primeiro atributo escolhido foi [ÁREA]");
+            printf("\n");
             break;
         case 3:
             resultado1 = pib1 > pib2 ? 1 : 0;
+            printf("O primeiro atributo escolhido foi [PIB]");
+            printf("\n");
             break;
         case 4:
             resultado1 = pTuristico1 > pTuristico2 ? 1 : 0;
+            printf("O primeiro atributo escolhido foi [NÚMEROS DE PONTOS TURÍSTICOS]");
+            printf("\n");
             break;
         case 5:
             resultado1 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0;
+            printf("O primeiro atributo escolhido foi [DENSIDADE POPULACIONAL]");
+            printf("\n");
             break;
         default:
             printf("Opção inválida! Tente Novamente.\n");
@@ -149,18 +159,28 @@ int main(){
         switch (segundoAtributo){
             case 1:
                 resultado2 = populacao1 > populacao2 ? 1 : 0;
-            break;
+                printf("O segundo atributo escolhido foi [POPULAÇÃO]");
+                printf("\n");
+                break;
             case 2:
                 resultado2 = area1 > area2 ? 1 : 0;
+                printf("O segundo atributo escolhido foi [ÁREA]");
+                printf("\n");
                 break;
             case 3:
                 resultado2 = pib1 > pib2 ? 1 : 0;
+                printf("O segundo atributo escolhido foi [PIB]");
+                printf("\n");
                 break;
             case 4:
                 resultado2 = pTuristico1 > pTuristico2 ? 1 : 0;
+                printf("O segundo atributo escolhido foi [NÚMEROS DE PONTOS TURÍSTICOS]");
+                printf("\n");
                 break;
             case 5:
                 resultado2 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0;
+                printf("O segundo atributo escolhido foi [DENSIDADE POPULACIONAL]");
+                printf("\n");
                 break;
             default:
                 printf("Opção inválida! Tente Novamente.\n");
