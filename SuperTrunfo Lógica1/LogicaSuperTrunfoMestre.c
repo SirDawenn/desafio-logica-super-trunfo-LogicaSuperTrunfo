@@ -1,3 +1,14 @@
+// Finalização do código:
+// Nível Mestre: Switch, Menus, multiplas escolhas e ternário
+// Feito por André Massaud
+
+
+// Desafio Super Trunfo - paises
+// Tema 2 - Comparação das Cartas
+// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de paises. 
+
+
+
 #include <stdio.h>
 
 int main() {
@@ -224,6 +235,9 @@ int main() {
 
                 //comparação de ambos os dados inseridos para decidir o vitorioso
 
+             printf("Os dados comparados foram:");
+             printf("%d"), &opcaodado2;
+
             float resultado, somaopcao1, somaopcao2;    
             if (somaopcao1 && somaopcao2){
                 printf("Parabéns! O País Vencedor é %s!\n\n", pais);
@@ -232,6 +246,7 @@ int main() {
                 } else {
                     printf("Parabéns! O País Vencedor é%s!\n\n", pais2);
                 }
+                
         
             break;   
             case 2:
