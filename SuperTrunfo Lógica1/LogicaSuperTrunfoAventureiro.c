@@ -194,6 +194,8 @@ int main() {
                         }else
                             printf("A carta 2 tem menor densidade populacional\n");
                         break;
+                        default:
+                            printf("Opção inválida. Tente novamente.\n");
                     }
                     break;
             case 2:
