@@ -1,5 +1,5 @@
 #include <stdio.h>
-// Finalização do código commit 
+// Finalização do código: 11:30
 // Nível Aventureiro: Switch e Menus
 // Feito por André Massaud
 
