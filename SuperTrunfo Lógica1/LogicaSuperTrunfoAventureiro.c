@@ -195,7 +195,8 @@ int main() {
                             printf("A carta 2 tem menor densidade populacional\n");
                         break;
                     }
-                case 2:
+                    break;
+            case 2:
                 // Código para exibir as regras
                 printf("Regras do Jogo:\n");
                 printf("Temos algumas regras básicas\n");
