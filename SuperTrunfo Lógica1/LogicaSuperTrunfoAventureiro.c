@@ -6,46 +6,13 @@
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
+// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de Países. 
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
-
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
-
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-    /// Atributos
-    char Estado[3];  char Estado2[3];
+    char Nome_do_país[25];  char Nome_do_país2[25];
     char codigo_carta[4];  char codigo_carta2[4];
-    char Nome_da_Cidade[25]; char Nome_da_Cidade2[25]; 
     int Populacao; int Populacao2;
     float Area; float Area2;
     float PIB; float PIB2;
@@ -71,23 +38,20 @@ int main() {
 
                 printf("Introduza os dados da carta 1 a seguir:\n");
                 //carta1
-            
-                printf("Sigla do Estado da cidade (Duas letras): \n");
-                scanf ("%2s", Estado);
-    
+                
                 printf("Código da carta (primeira letra seguida de dois numeros): \n");
                 scanf("%3s", codigo_carta);
     
-                printf("Introduza o nome da cidade: \n");
-                scanf(" %[^\n]", Nome_da_Cidade);
+                printf("Introduza o nome do País: \n");
+                scanf(" %[^\n]", Nome_do_país);
     
                 printf("Introduza o número de população: \n");
                 scanf("%d", &Populacao);
     
-                printf("Introduza o raio de distância total da cidade em km²: \n");
+                printf("Introduza o raio de distância total do País em km²: \n");
                 scanf("%f", &Area);
     
-                printf("Introduza o PIB da cidade em bilhões: \n");
+                printf("Introduza o PIB do País em bilhões: \n");
                 scanf("%f", &PIB);
     
                 printf("Introduza o número de pontos turísticos: \n");
@@ -96,23 +60,20 @@ int main() {
                  //carta 2
     
                 printf("Introduza os dados da carta 2 a seguir:\n");
-    
-                printf("Sigla do Estado da cidade (Duas letras): \n");
-                scanf ("%2s", Estado2);
-    
+                   
                 printf("Código da carta (primeira letra seguida de dois numeros): \n");
                 scanf("%3s", codigo_carta2);
     
-                printf("Introduza o nome da cidade: \n");
-                scanf(" %[^\n]", Nome_da_Cidade2);
+                printf("Introduza o nome do País: \n");
+                scanf(" %[^\n]", Nome_do_país2);
     
                 printf("Introduza o número de população: \n");
                 scanf("%d", &Populacao2);
     
-                printf("Introduza o raio de distância total da cidade em km²: \n");
+                printf("Introduza o raio de distância total do País em km²: \n");
                 scanf("%f", &Area2);
     
-                printf("Introduza o PIB da cidade em bilhões: \n");
+                printf("Introduza o PIB do País em bilhões: \n");
                 scanf("%f", &PIB2);
     
                 printf("Introduza o número de pontos turísticos: \n");
@@ -137,26 +98,24 @@ int main() {
                 printf("      ***Estes são os dados inseridos das cartas:***");
                 //carta 1
                     printf("\n      ***Dados da Carta 1:***\n");
-                    printf("Código: %s\n", Estado);
                     printf("Código: %s\n", codigo_carta);
-                    printf("Cidade: %s\n", Nome_da_Cidade);
+                    printf("País: %s\n", Nome_do_país);
                     printf("População: %d\n", Populacao);
                     printf("Área: %.2f km²\n", Area);
                     printf("PIB: %.2f bilhões\n", PIB);
                     printf("Pontos turísticos: %d\n", Numero_de_pontos_turisticos);
-                    printf("PIB per capita da cidade: %.2f \n", PIBperCapita1);
+                    printf("PIB per capita do País: %.2f \n", PIBperCapita1);
                     printf("A densidade populacional da Carta 1 é: %2f\n", densidade1);
     
                 //carta 2
                     printf("\n      ***Dados da Carta 2:***\n");
-                    printf("Código: %s\n", Estado2);
                     printf("Código: %s\n", codigo_carta2);
-                    printf("Cidade: %s\n", Nome_da_Cidade2);
+                    printf("País: %s\n", Nome_do_país2);
                     printf("População: %d\n", Populacao2);
                     printf("Área: %.2f km²\n", Area2);
                     printf("PIB: %.2f bilhões\n", PIB2);
                     printf("Pontos turísticos: %d\n", Numero_de_pontos_turisticos2);
-                    printf("PIB per capita da cidade: %.2f\n", PIBperCapita2);
+                    printf("PIB per capita do País: %.2f\n", PIBperCapita2);
                     printf("A densidade populacional da Carta 2 é: %2f\n", densidade2);
     
             //Variaveis das somas das cartas, armazenando dados do superpoder
@@ -240,11 +199,11 @@ int main() {
                 // Código para exibir as regras
                 printf("Regras do Jogo:\n");
                 printf("Temos algumas regras básicas\n");
-                printf("O código da carta deve ser a inicial da cidade e mais dois numeros crescentes\n");
+                printf("O código da carta deve ser a inicial do País e mais dois numeros crescentes\n");
                 printf("Como por exemplo, São Paulo deve ser S01\n");
                 printf("E a segunda carta, será Rio de Janeiro, R02\n");
                 printf("A próxima deve ser a inicial e 03, e assim por diante!\n");
-                printf("A segunda regra é: Esteja atualizado com os dados da cidade de acordo com o IBGE\n");
+                printf("A segunda regra é: Esteja atualizado com os dados do País de acordo com o IBGE\n");
                 printf("Não minta nos dados!\n");
                 break;
     
