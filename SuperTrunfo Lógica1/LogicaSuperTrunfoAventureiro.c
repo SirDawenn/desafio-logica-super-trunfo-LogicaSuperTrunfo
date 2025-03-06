@@ -67,7 +67,7 @@ int main() {
 
             case 1:
                 printf("Iniciando o jogo...\n");
-                printf("Olá, jogador. Iremos realizar primeiro a inserção de dados das 2 cartas");
+                printf("Olá, jogador. Iremos realizar primeiro a inserção de dados das 2 cartas\n");
 
                 printf("Introduza os dados da carta 1 a seguir:\n");
                 //carta1
@@ -183,39 +183,60 @@ int main() {
                 printf("A seguir vamos mostrar a comparação de todos os dados inseridos e qual o vencedor\n");
                 printf("De acordo com cada categoria\n");
                 
-                    if (Populacao > Populacao2){
-                        printf ("A carta 1 tem maior população\n");
-                    }else{
-                        printf ("A carta 2 tem maior população\n");}
-                    
-                    if (Area > Area2){
-                        printf ("A carta 1 tem maior KM² de área\n");
-                    }else{
-                        printf ("A carta 2 tem maior KM² de área\n");}
-    
-                    if (PIB > PIB2){
-                        printf ("A carta 1 tem maior PIB\n");
-                    }else{
-                        printf ("A carta 2 tem maior PIB\n");}
-    
-                    if (Numero_de_pontos_turisticos > Numero_de_pontos_turisticos2){
-                        printf ("A carta 1 tem mais pontos turisticos\n");
-                    }else{
-                        printf ("A carta 2 tem mais pontos turisticos\n");}
-                    
-                    if(PIBperCapita1>PIBperCapita2){
-                        printf("A carta 1 tem PIB per capita maior\n");
-                    }else{
-                        printf("A carta 2 tem maior PIB per capita\n");
+                char opcaodado;
+                printf("Informe qual o dado escolhido da rodada\n");
+                printf("Pupulação = P\n");
+                printf("Area = A\n");
+                printf("PIB = B\n");  
+                printf("Pontos Turisticos = T\n");
+                printf("PIB per Capta = C\n");
+                printf("Densidade Populacional = D\n");
+
+
+                    scanf("%d", &opcaodado);
+                    switch (opcaodado){
+                    case 1:
+                        if (Populacao > Populacao2){
+                            printf ("A carta 1 tem maior população\n");
+                        }else{
+                            printf ("A carta 2 tem maior população\n");}
+                        break;
+
+                    case 2:
+                        if (Area > Area2){
+                            printf ("A carta 1 tem maior KM² de área\n");
+                        }else{
+                            printf ("A carta 2 tem maior KM² de área\n");}
+                        break;    
+                     
+                    case 3:
+                        if (PIB > PIB2){
+                            printf ("A carta 1 tem maior PIB\n");
+                        }else{
+                            printf ("A carta 2 tem maior PIB\n");}
+                        break;
+
+                    case 4:        
+                        if (Numero_de_pontos_turisticos > Numero_de_pontos_turisticos2){
+                            printf ("A carta 1 tem mais pontos turisticos\n");
+                        }else{
+                            printf ("A carta 2 tem mais pontos turisticos\n");}
+                        break;
+                    case 5: 
+                        if(PIBperCapita1>PIBperCapita2){
+                            printf("A carta 1 tem PIB per capita maior\n");
+                        }else{
+                            printf("A carta 2 tem maior PIB per capita\n");
                     }
-                    
-                    if(densidade1 < densidade2){
-                        printf("A carta 1 tem menor densidade populacional\n");
-                    }else
-                        printf("A carta 2 tem menor densidade populacional\n");
-                // Código para iniciar o jogo
-                break;
-            case 2:
+                        break;
+                    case 6:
+                        if(densidade1 < densidade2){
+                            printf("A carta 1 tem menor densidade populacional\n");
+                        }else
+                            printf("A carta 2 tem menor densidade populacional\n");
+                        break;
+                    }
+                case 2:
                 // Código para exibir as regras
                 printf("Regras do Jogo:\n");
                 printf("Temos algumas regras básicas\n");
@@ -225,15 +246,14 @@ int main() {
                 printf("A próxima deve ser a inicial e 03, e assim por diante!\n");
                 printf("A segunda regra é: Esteja atualizado com os dados da cidade de acordo com o IBGE\n");
                 printf("Não minta nos dados!\n");
-                 break;
+                break;
     
             case 3:
                 printf("Saindo...\n");
                 break;
             default:
                 printf("Opção inválida. Tente novamente.\n");
-        }
-                
+        }   
  return 0;
 }
 
