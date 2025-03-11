@@ -63,12 +63,7 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
     float denspop2 = (float) populacao2 / area2;
     float pibpcap2 = (float) pib2 / area2;
 
-     printf("Confira os valores da sua primeira carta: \n");
-    printf("Carta: %s\n Nome do Pais: %s\n Estado: %s\n Cidade: %s\n População: %d habitantes \n Area: %f km² \n PIB: %f  bilhões de reais\n Pontos turistico: %d\n Densidade Populacional: %f\n PIB per Capita: %f\n", codcarta, pais, estado, cidade, populacao, area, pib, pt, denspop, pibpcap);
     
-    printf("Agora Confira os valores da sua segunda carta: \n");
-    printf("Carta: %s\n Nome do Pais: %s\n Estado: %s\n Cidade: %s\n População: %d habitantes \n Area: %f km² \n PIB: %f bilhões de reais \n Pontos turistico: %d\n Densidade Populacional: %f\n PIB per Capita: %f\n", codcarta2, pais2, estado2, cidade2, populacao2, area2, pib2, pt2, denspop2, pibpcap2);
-
     printf("Agora, começaremos o jogo!!!!!");
     printf(" Escolha qual atributo você deseja para realizar a comparação entre cartas:");
     printf(" 1. Área \n");
@@ -83,7 +78,8 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
     switch (opcao)
     {
     case 1:
-        printf("A opção esolhida foi: Área");
+        printf("A opção escolhida foi: Área\n");
+        printf(" %s VS %s \n", pais, pais2);
         if (area > area2) {
             printf("A cidade %s possui uma Area de %f\nJá a Area da cidade %s é de %f\nA cidade vencedora então foi: %s\n", cidade, area, cidade2, area2, cidade);
     } else if (area2 > area){
@@ -93,7 +89,8 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
         }
         break;
     case 2:
-        printf("A opção esolhida foi: PIB");
+        printf("A opção escolhida foi: PIB\n");
+        printf(" %s VS %s \n", pais, pais2);
     if (pib > pib2) {
         printf("A cidade %s possui um PIB de %f\nJá o PIB da cidade %s é de %f\nA cidade vencedora então é: %s\n", cidade, pib, cidade2, pib2, cidade);
 } else if (pib2 > pib){
@@ -103,7 +100,8 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
     }
     break;
     case 3:
-    printf("A opção esolhida foi: Pontos Turisticos");
+    printf("A opção escolhida foi: Pontos Turisticos\n");
+    printf(" %s VS %s \n", pais, pais2);
     if (pt > pt2) {
         printf("A cidade %s possui a quantidade de Pontos Turisticos: %d\nJá a quantidade na cidade %s é de: %d\nA cidade vencedora então é: %s\n", cidade, pt, cidade2, pt2, cidade);
 } else if (pt2 > pt){
@@ -113,7 +111,8 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
     }
     break;
     case 4:
-    printf("A opção esolhida foi: População");
+    printf("A opção escolhida foi: População\n");
+    printf(" %s VS %s \n", pais, pais2);
     if (populacao > populacao2) {
         printf("A cidade %s possui a População: %d\nJá a População na cidade %s é de: %d\nA cidade vencedora então é: %s\n", cidade, populacao, cidade2, populacao2, cidade);
 } else if (populacao2 > populacao){
@@ -123,7 +122,8 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
     }
     break;
     case 5:
-    printf("A opção esolhida foi: Densidade Populacional");
+    printf("A opção escolhida foi: Densidade Populacional\n");
+    printf(" %s VS %s \n", pais, pais2);
     if (denspop < denspop2) {
         printf("A cidade %s possui a Densidade Populacional de: %f\nJá a Densidade Populacional na cidade %s é de: %f\nA cidade vencedora então é: %s\n", cidade, denspop, cidade2, denspop2, cidade);
 } else if (denspop2 < denspop){
@@ -133,7 +133,8 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
     }
     break;
     case 6:
-    printf("A opção esolhida foi: PIB per capita");
+    printf("A opção escolhida foi: PIB per capita\n");
+    printf(" %s VS %s \n", pais, pais2);
     if (pibpcap > pibpcap2) {
         printf("A cidade %s possui PIB per capita de: %f\nJá o PIB per capita na cidade %s é de: %f\nA cidade vencedora então é: %s\n", cidade, pibpcap, cidade2, pibpcap2, cidade);
 } else if (pibpcap2 > pibpcap){
@@ -147,6 +148,14 @@ printf("Informe o numero de pontos turisticos da cidade %s\n", cidade2);
         break;
     }
    
-        printf (" FIM DE JOGO.");
+        printf (" FIM DE JOGO.\n");
+
+        printf("Confira os valores de cada carta agora que o jogo acabou!\n");
+    printf("Primeira carta: \n");
+    printf("Carta: %s\n Nome do Pais: %s\n Estado: %s\n Cidade: %s\n População: %d habitantes \n Area: %f km² \n PIB: %f  bilhões de reais\n Pontos turistico: %d\n Densidade Populacional: %f\n PIB per Capita: %f\n", codcarta, pais, estado, cidade, populacao, area, pib, pt, denspop, pibpcap);
+    
+    printf("Agora Confira os valores da sua segunda carta: \n");
+    printf("Carta: %s\n Nome do Pais: %s\n Estado: %s\n Cidade: %s\n População: %d habitantes \n Area: %f km² \n PIB: %f bilhões de reais \n Pontos turistico: %d\n Densidade Populacional: %f\n PIB per Capita: %f\n", codcarta2, pais2, estado2, cidade2, populacao2, area2, pib2, pt2, denspop2, pibpcap2);
+    
     return 0;
 }
