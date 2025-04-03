@@ -42,8 +42,6 @@ int main() {
     printf("Digite quantos pontos turisticos tem a cidade:\n");//Cadastro Pontos Turisticos
     scanf("%d", &pontotur1);
 
-    // Limpar buffer do teclado
-    while(getchar() != '\n');
 
    //Cadastro Carta número 2
    printf("\nCadastro da Carta 2\n");
@@ -68,8 +66,6 @@ int main() {
    printf("Digite quantos pontos turisticos tem a cidade:\n");//Cadastro Pontos Turisticos
    scanf("%d", &pontotur2);
 
-   // Limpar buffer do teclado
-   while(getchar() != '\n');
     
    //Espaço para Calculos de Densidade, pibPerCapita e Super Poder de cada carta
 
