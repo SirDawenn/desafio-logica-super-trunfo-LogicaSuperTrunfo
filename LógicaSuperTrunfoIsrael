@@ -1,0 +1,248 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    
+    char estado1, estado2; //Estado
+    char codigo_carta1[4], codigo_carta2[4]; //Código da Carta
+    char nome_cidade1[40], nome_cidade2[40]; //Nome da Cidade
+    unsigned long int populacao1, populacao2; //População
+    float area_cidade1, area_cidade2; //Area da cidade
+    float pib1, pib2; ///Pib da cidade
+    int pontotur1, pontotur2, Atributo1, Atributo2,resultado1, resultado2; 
+    float densidadePopulacional1, densidadePopulacional2; //Densidade Populacional
+    float pibPerCapita1, pibPerCapita2; //Pib por Capita
+    int superPoder1, superPoder2;
+ 
+    printf("Olá Jogador\nBem vindo ao Super Trunfo.\n");//Mensagem de Bem Vindo
+    printf("----- Vamos Jogar -----\n");
+    printf("\n");
+
+    //Cadastro da Carta numero 1
+    printf("\nCadastro da Carta 1\n");
+    printf("Digite o Estado:(de A a H)\n");//Cadastro do Estado
+    scanf(" %c", &estado1);
+
+    printf("Digite o código da carta:(ex:A01)\n");//Cadastro do código da Carta
+    scanf(" %3s", codigo_carta1);
+
+    printf("Digite o nome da Cidade:\n");//Cadastro do nome da Cidade
+    scanf(" %39[^\n]", nome_cidade1);  // Corrigido para ler string com espaços
+
+    printf("Digite a populacao:\n");//Cadastro da População
+    scanf("%lu", &populacao1);  // Removido espaço antes do %lu
+
+    printf("Digite a Area da cidade:(em km2)\n");//Cadastro da Area da cidade
+    scanf("%f", &area_cidade1);
+
+    printf("Digite o Pib da cidade:(em milhões)\n");//Cadastro Pib da cidade
+    scanf("%f", &pib1);
+
+    printf("Digite quantos pontos turisticos tem a cidade:\n");//Cadastro Pontos Turisticos
+    scanf("%d", &pontotur1);
+
+    // Limpar buffer do teclado
+    while(getchar() != '\n');
+
+   //Cadastro Carta número 2
+   printf("\nCadastro da Carta 2\n");
+   printf("Digite o Estado:(de A a H)\n");//Cadastro do Estado
+   scanf(" %c", &estado2);
+
+   printf("Digite o código da carta:(ex:A01)\n");//Cadastro do código da Carta
+   scanf(" %3s", codigo_carta2);
+
+   printf("Digite o nome da Cidade:\n");//Cadastro do nome da Cidade
+   scanf(" %39[^\n]", nome_cidade2);  // Corrigido para ler string com espaços
+
+   printf("Digite a populacao:\n");//Cadastro da População
+   scanf("%lu", &populacao2);  // Removido espaço antes do %lu
+
+   printf("Digite a Area da cidade:(em km2)\n");//Cadastro da Area da cidade
+   scanf("%f", &area_cidade2);
+
+   printf("Digite o Pib da cidade:(em milhões)\n");//Cadastro Pib da cidade
+   scanf("%f", &pib2);
+
+   printf("Digite quantos pontos turisticos tem a cidade:\n");//Cadastro Pontos Turisticos
+   scanf("%d", &pontotur2);
+
+   // Limpar buffer do teclado
+   while(getchar() != '\n');
+    
+   //Espaço para Calculos de Densidade, pibPerCapita e Super Poder de cada carta
+
+   densidadePopulacional1 = (float)populacao1 / area_cidade1; //Calcula a densidade da Carta1
+   pibPerCapita1 = pib1 / populacao1; //Calcula o Pib per Capita da carta 1
+   superPoder1 = populacao1 + area_cidade1 + pib1 + pontotur1 + densidadePopulacional1;
+
+   densidadePopulacional2 = (float)populacao2 / area_cidade2; //Calcula a densidade da Carta 2
+   pibPerCapita2 = pib2 / populacao2; //Calcula o Pib per Capita da Carta 2
+   superPoder2 = populacao2 + area_cidade2 + pib2 + pontotur2 + pibPerCapita2 + densidadePopulacional2;
+
+    //Exibe na tela os dados da carta 1
+    printf("\nCarta 1\n");
+    printf("Código da Carta: %s - Estado: %c\n", codigo_carta1, estado1);
+    printf("Cidade: %s - População: %lu\n", nome_cidade1, populacao1);
+    printf("Area: %.2f - Pib: %.2f - Pontos Turisticos: %d\n", area_cidade1, pib1, pontotur1);
+    printf("Densidade Populacional %.2f Habitantes\n", densidadePopulacional1);
+    printf("Pib per Capita: %.2f\n", pibPerCapita1);
+    printf("\n");
+
+    //Exibe na tela os dados da carta 2
+    printf("Carta 2\n");
+    printf("Código da Carta: %s - Estado: %c\n", codigo_carta2, estado2);
+    printf("Cidade: %s - População: %lu\n", nome_cidade2, populacao2);
+    printf("Area: %.2f - Pib: %.2f - Pontos Turisticos: %d\n", area_cidade2, pib2, pontotur2);
+    printf("Densidade Populacional: %.2f habitantes\n", densidadePopulacional2);
+    printf("Pib per Capita: %.2f\n", pibPerCapita2);
+    printf("\n");
+
+    //Comparação de Cartas
+    printf("--------DESAFIO SUPER TRUNFO--------\n");
+    printf("--------COMPARAÇÃO DAS CARTAS--------\n");
+    
+    // Loop para garantir que o usuário escolha uma opção válida
+    do {
+        printf("Escolha o Primeiro Atributo\n");
+        printf("[1]. População\n");
+        printf("[2]. Área/km2\n");
+        printf("[3]. PIB\n");
+        printf("[4]. Pontos Turísticos\n");
+        printf("[5]. Densidade Populacional\n");
+        printf("Digite uma das opções: ");
+        scanf("%d", &Atributo1);  // Removido \n
+        printf("\n");
+
+        if(Atributo1 < 1 || Atributo1 > 5) {
+            printf("Opção inválida! Digite um número entre 1 e 5.\n");
+        }
+    } while(Atributo1 < 1 || Atributo1 > 5);
+
+    switch (Atributo1) {
+        case 1:
+            resultado1 = populacao1 > populacao2 ? 1 : 0;
+            printf("O primeiro Atributo escolhido foi [POPULAÇÃO]\n");
+            break;
+        case 2:
+            resultado1 = area_cidade1 > area_cidade2 ? 1 : 0;
+            printf("O primeiro Atributo escolhido foi [Área]\n");
+            break;
+        case 3:
+            resultado1 = pib1 > pib2 ? 1 : 0;
+            printf("O primeiro atributo escolhido foi [PIB]\n");
+            break;
+        case 4:
+            resultado1 = pontotur1 > pontotur2 ? 1 : 0;
+            printf("O primeiro Atributo escolhido foi [Pontos Turísticos]\n");
+            break;
+        case 5:
+            resultado1 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0;
+            printf("O primeiro Atributo escolhido foi [Densidade Populacional]\n");
+            break;
+    }
+
+    // Loop para garantir que o segundo atributo seja diferente do primeiro
+    do {
+        printf("\nEscolha o segundo Atributo (diferente do primeiro)\n");
+        printf("[1]. População\n");
+        printf("[2]. Área/km2\n");
+        printf("[3]. PIB\n");
+        printf("[4]. Pontos Turísticos\n");
+        printf("[5]. Densidade Populacional\n");
+        printf("Digite uma das opções: ");
+        scanf("%d", &Atributo2);  // Removido \n
+        printf("\n");
+
+        if(Atributo2 == Atributo1) {
+            printf("Você não pode escolher o mesmo atributo duas vezes!\n");
+        } else if(Atributo2 < 1 || Atributo2 > 5) {
+            printf("Opção inválida! Digite um número entre 1 e 5.\n");
+        }
+    } while(Atributo2 == Atributo1 || Atributo2 < 1 || Atributo2 > 5);
+
+    switch (Atributo2) {
+        case 1:
+            resultado2 = populacao1 > populacao2 ? 1: 0;
+            printf("O segundo atributo escolhido foi [POPULAÇÃO]\n");
+            break;
+        case 2:
+            resultado2 = area_cidade1 > area_cidade2 ? 1 : 0;
+            printf("O segundo atributo escolhido foi [ÁREA]\n");
+            break;
+        case 3:
+            resultado2 = pib1 > pib2 ? 1 : 0;
+            printf("O segundo atributo escolhido foi [PIB]\n");
+            break;
+        case 4:
+            resultado2 = pontotur1 > pontotur2 ? 1 : 0;
+            printf("O segundo atributo escolhido foi [NÚMEROS DE PONTOS TURÍSTICOS]\n");
+            break;
+        case 5:
+            resultado2 = densidadePopulacional1 < densidadePopulacional2 ? 1 : 0;
+            printf("O segundo atributo escolhido foi [DENSIDADE POPULACIONAL]\n");
+            break;
+    }
+
+    printf("\n------------->RESULTADO DO DESAFIO<---------------\n");
+    // Saída de Dados. Exibindo os atributos comparados e o resultado do vencedor.
+
+    printf("\nAtributo 1 (%d):\n", Atributo1);
+    switch (Atributo1) {
+        case 1:
+            printf("NOME DA CIDADE => CARTA 1: %s - CARTA 2: %s\n", nome_cidade1, nome_cidade2);
+            printf("POPULAÇÃO => CARTA 1: %lu - CARTA 2: %lu\n", populacao1, populacao2);
+            break;
+        case 2:
+            printf("NOME DA CIDADE => CARTA 1: %s - CARTA 2: %s\n", nome_cidade1, nome_cidade2);
+            printf("ÁREA/ KM² => CARTA 1: %.2f - CARTA 2: %.2f\n", area_cidade1, area_cidade2);
+            break;
+        case 3:
+            printf("NOME DA CIDADE => CARTA 1: %s - CARTA 2: %s\n", nome_cidade1, nome_cidade2);
+            printf("PIB => CARTA 1: %.2f - CARTA 2: %.2f\n", pib1, pib2);
+            break;
+        case 4:
+            printf("NOME DA CIDADE => CARTA 1: %s - CARTA 2: %s\n", nome_cidade1, nome_cidade2);
+            printf("NÚMERO DE PONTOS TURÍSTICOS => CARTA 1: %d - CARTA 2: %d\n", pontotur1, pontotur2);
+            break;
+        case 5:
+            printf("NOME DA CIDADE => CARTA 1: %s - CARTA 2: %s\n", nome_cidade1, nome_cidade2);
+            printf("DENSIDADE POPULACIONAL => CARTA 1: %.2f - CARTA 2: %.2f\n", densidadePopulacional1, densidadePopulacional2); 
+            break;
+    }
+
+    printf("\nAtributo 2 (%d):\n", Atributo2);
+    switch (Atributo2) {
+        case 1:
+            printf("POPULAÇÃO => CARTA 1: %lu - CARTA 2: %lu\n", populacao1, populacao2);
+            break;
+        case 2:
+            printf("ÁREA/ KM² => CARTA 1: %.2f - CARTA 2: %.2f\n", area_cidade1, area_cidade2);
+            break;
+        case 3:
+            printf("PIB => CARTA 1: %.2f - CARTA 2: %.2f\n", pib1, pib2);
+            break;
+        case 4:
+            printf("NÚMERO DE PONTOS TURÍSTICOS => CARTA 1: %d - CARTA 2: %d\n", pontotur1, pontotur2);
+            break;
+        case 5:
+            printf("DENSIDADE POPULACIONAL => CARTA 1: %.2f - CARTA 2: %.2f\n", densidadePopulacional1, densidadePopulacional2); 
+            break;
+    }
+
+    printf("\n");
+    if (resultado1 && resultado2) {
+        printf("Parabéns! A carta 1 venceu em ambos os atributos!\n");
+    } else if (!resultado1 && !resultado2) {
+        printf("Parabéns! A carta 2 venceu em ambos os atributos!\n");
+    } else {
+        printf("Empate! Cada carta venceu em um atributo.\n");
+    }
+
+    printf("\n");
+    printf("------------------->>> FIM DO JOGO <<<------------------\n");
+    printf("--------------->>> DESAFIO SUPERTRUNFO <<<--------------\n");
+
+    return 0;
+}
