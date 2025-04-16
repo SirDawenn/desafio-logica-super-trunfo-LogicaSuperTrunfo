@@ -290,7 +290,6 @@ int main() {
 
   printf("País da Carta 1: %s e País da Carta 2: %s\n", pais, pais2);
 
-
   printf("\nAtributos escolhidos escolhidos para Comparação : %s e %s\n", escolha1, escolha2);
   printf("Atributo 1: %s\n", escolha1);
   printf("Carta 1: %.2f\n", valor1_c1);
@@ -309,6 +308,7 @@ int main() {
       printf("Resultado: Empate\n");
     }
   }
+  
   if (escolha2 == "Densidade Populacional") {
     if (valor2_c1 < valor2_c2) {
       printf("Resultado: Carta 1 venceu (menor densidade populacional).\n");
