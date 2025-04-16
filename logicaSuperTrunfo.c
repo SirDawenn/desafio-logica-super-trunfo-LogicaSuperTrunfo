@@ -1,6 +1,5 @@
 #include <stdio.h>   // Biblioteca padrão de entrada e saída
 #include <string.h>  // Biblioteca Biblioteca para manipulação de strings
-#include <stdlib.h>  // Biblioteca para funções utilitárias, como alocação de memória e conversões
 
 int main() {
 
@@ -308,7 +307,7 @@ int main() {
       printf("Resultado: Empate\n");
     }
   }
-  
+ 
   if (escolha2 == "Densidade Populacional") {
     if (valor2_c1 < valor2_c2) {
       printf("Resultado: Carta 1 venceu (menor densidade populacional).\n");
@@ -317,7 +316,7 @@ int main() {
       printf("Resultado: Carta 2 venceu (menor densidade populacional).\n");
       return 0;
     } else {
-      printf(C:\Users\jamir\Documents\Code bloks projetos\Nível Mestre Desafiando a lógica super trunfo2\main.cpp"Resultado: Empate\n");
+      printf("Resultado: Empate\n");
     }
   }
 
