@@ -1,39 +1,41 @@
 #include <stdio.h>   // Biblioteca padrão de entrada e saída
 #include <string.h>  // Biblioteca Biblioteca para manipulação de strings
+#include <stdlib.h>  // Biblioteca para funções utilitárias, como alocação de memória e conversões
 
 int main() {
 
   int opcao1, opcao2;
-  char* escolha1;
-  char* escolha2;
+  char* escolha1;  // Ponteiro para armazenar o nome do primeiro atributo escolhido para comparação
+  char* escolha2;  // Ponteiro para armazenar o nome do segundo atributo escolhido para comparação
+
   // Declaração de variáveis para armazenar os dados da carta 1
-  char Estado;                      // Armazena a letra que representa o estado (de 'A' a 'H')
-  char codigo[6];                   // Armazena o código da carta (como uma string de até 5 caracteres + '\0')
-  char cidade[30];                  // Armazena o nome da cidade (até 29 caracteres + '\0')
-  char pais[30];                    // Armazena o nome do país da cidade da carta 1
-  unsigned long int populacao = 0;  // Armazena o número de habitantes da cidade
-  double area = 0;                  // Armazena a área da cidade em km²
-  double pib = 0;                   // Armazena o PIB da cidade em bilhões de reais
-  int turistico = 0;                // Armazena a quantidade de pontos turísticos da cidade
-  double densidade = 0;             // Armazena a densidade da população pela areá da cidade
-  double pibPerCapita = 0;          // Armazena o PIB per capita da cidade
-  double superPoder = 0;            // Super Poder da carta
-  double valor1_c1 = 0, valor2_c1 = 0;
+
+  char Estado;                          // Armazena a letra que representa o estado (de 'A' a 'H')
+  char codigo[6];                       // Armazena o código da carta (como uma string de até 5 caracteres + '\0')
+  char cidade[30];                      // Armazena o nome da cidade (até 29 caracteres + '\0')
+  char pais[30];                        // Armazena o nome do país da cidade da carta 1
+  unsigned long int populacao = 0;      // Armazena o número de habitantes da cidade
+  double area = 0;                      // Armazena a área da cidade em km²
+  double pib = 0;                       // Armazena o PIB da cidade em bilhões de reais
+  int turistico = 0;                    // Armazena a quantidade de pontos turísticos da cidade
+  double densidade = 0;                 // Armazena a densidade da população pela areá da cidade
+  double pibPerCapita = 0;              // Armazena o PIB per capita da cidade
+  double superPoder = 0;                // Super Poder da carta
+  double valor1_c1 = 0, valor2_c1 = 0;  // Armazena os valores dos atributos escolhidos para a carta 1
 
   // Declaração de variáveis da carta 2
-  char Estado2;                      // Armazena a letra que representa o estado (de 'A' a 'H')
-  char codigo2[6];                   // Armazena o código da carta (como uma string de até 5 caracteres + '\0')
-  char cidade2[30];                  // Armazena o nome da cidade (até 29 caracteres + '\0')
-  char pais2[30];                    // Armazena o nome do país da cidade da carta 2
-  unsigned long int populacao2 = 0;  // Armazena o número de habitantes da cidade 2
-  double area2 = 0;                  // Armazena a área da cidade em km²
-  double pib2 = 0;                   // Armazena o PIB da cidade em bilhões de reais
-  int turistico2 = 0;                // Armazena a quantidade de pontos turísticos da cidade 2
-  double densidade2 = 0;             // Armazena a densidade da população pela areá da cidade 2
-  double pibPerCapita2 = 0;          // Armazena o PIB per capita da cidade 2
-  double superPoder2 = 0;            // Super Poder da carta 2
-  double valor1_c2 = 0, valor2_c2 = 0;
-
+  char Estado2;                         // Armazena a letra que representa o estado (de 'A' a 'H')
+  char codigo2[6];                      // Armazena o código da carta (como uma string de até 5 caracteres + '\0')
+  char cidade2[30];                     // Armazena o nome da cidade (até 29 caracteres + '\0')
+  char pais2[30];                       // Armazena o nome do país da cidade da carta 2
+  unsigned long int populacao2 = 0;     // Armazena o número de habitantes da cidade 2
+  double area2 = 0;                     // Armazena a área da cidade em km²
+  double pib2 = 0;                      // Armazena o PIB da cidade em bilhões de reais
+  int turistico2 = 0;                   // Armazena a quantidade de pontos turísticos da cidade 2
+  double densidade2 = 0;                // Armazena a densidade da população pela areá da cidade 2
+  double pibPerCapita2 = 0;             // Armazena o PIB per capita da cidade 2
+  double superPoder2 = 0;               // Super Poder da carta 2
+  double valor1_c2 = 0, valor2_c2 = 0;  // Armazena os valores dos atributos escolhidos para a carta 2
 
   // Entrada dos dados da carta 1
 
@@ -81,9 +83,12 @@ int main() {
 
   //Calculo da densidade da cidade 1
   densidade = populacao / area;
+
   //O valor do PIB está em bilhões, então para calcular o PIB per capita real, devmos multiplicar o valor por 1.000.000.000 antes da divisão
   pibPerCapita = (pib * 1000000000) / populacao;
-  superPoder = populacao + area + (pib * 1000000000) + turistico + pibPerCapita + (1.0 / densidade);  // Calcula o Super Poder
+
+  // Calcula o Super Poder
+  superPoder = populacao + area + (pib * 1000000000) + turistico + pibPerCapita + (1.0 / densidade);
 
   getchar();  // Limpa o caractere de nova linha '\n' deixado no buffer pelo scanf anterior
 
@@ -130,9 +135,6 @@ int main() {
 
   // Cálculos carta 2
 
-  //Calculo da entrada correta do pib2
-  pib2 = pib2 * 1000000000;
-
   //Calculo da densidade da cidade 2
   densidade2 = populacao2 / area2;
 
@@ -142,6 +144,7 @@ int main() {
   superPoder2 = populacao2 + area2 + (pib2 * 1000000000) + turistico2 + pibPerCapita2 + (1.0 / densidade2);  // Calcula o Super Poder da cidade 2
 
   // Exibe todos os dados armazenados da carta 1
+
   printf("\nCarta 1 \n");
   printf("Estado: %c \n", Estado);                               // Mostra a letra do estado
   printf("Código: %c%s\n", Estado, codigo);                      // Mostra o código
@@ -168,219 +171,75 @@ int main() {
   printf("PIB per Capita: R$ %.2lf\n", pibPerCapita2);            // Mostra o PIB per capita da cidade2
   printf("Super Poder: %.2lf\n\n", superPoder2);                  // Mostra o Super Poder da cidade 2
 
-  printf("\n");  //pula uma linha antes de exibir as opções de comparação
+  //printf("\n");  //pula uma linha antes de exibir as opções de comparação
 
-  printf("\nEscolha o primeiro atributo para comparar:\n");
+  printf("Escolha o primeiro atributo para comparar:\n");
   printf("1. Número de habitantes\n");
   printf("2. Área\n");
   printf("3. PIB\n");
   printf("4. Pontos turísticos\n");
-  printf("5. Densidade\n");
+  printf("5. Densidade Populacional\n");
   printf("6. PIB per capita\n");
   printf("7. Super Poder\n");
+
   printf("Escolha: ");
-  scanf("%d", &opcao1);
+  scanf("%d", &opcao1);  // Lê a opção do primeiro atributo para comparação
 
   switch (opcao1) {
     case 1:
       valor1_c1 = populacao;
       valor1_c2 = populacao2;
       escolha1 = "População";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("2. Área\n");
-      printf("3. PIB\n");
-      printf("4. Pontos turísticos\n");
-      printf("5. Densidade\n");
-      printf("6. PIB per capita\n");
-      printf("7. Super Poder\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("2. Área\n");
-        printf("3. PIB\n");
-        printf("4. Pontos turísticos\n");
-        printf("5. Densidade\n");
-        printf("6. PIB per capita\n");
-        printf("7. Super Poder\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
-
+      break;
     case 2:
       valor1_c1 = area;
       valor1_c2 = area2;
       escolha1 = "Área";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("1. Número de habitantes\n");
-      printf("3. PIB\n");
-      printf("4. Pontos turísticos\n");
-      printf("5. Densidade\n");
-      printf("6. PIB per capita\n");
-      printf("7. Super Poder\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("1. Número de habitantes\n");
-        printf("3. PIB\n");
-        printf("4. Pontos turísticos\n");
-        printf("5. Densidade\n");
-        printf("6. PIB per capita\n");
-        printf("7. Super Poder\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
+      break;
     case 3:
       valor1_c1 = pib * 1000000000;
       valor1_c2 = pib2 * 1000000000;
       escolha1 = "PIB";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("1. Número de habitantes\n");
-      printf("2. Área\n");
-      printf("4. Pontos turísticos\n");
-      printf("5. Densidade\n");
-      printf("6. PIB per capita\n");
-      printf("7. Super Poder\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("1. Número de habitantes\n");
-        printf("2. Área\n");
-        printf("4. Pontos turísticos\n");
-        printf("5. Densidade\n");
-        printf("6. PIB per capita\n");
-        printf("7. Super Poder\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
+      break;
     case 4:
       valor1_c1 = turistico;
       valor1_c2 = turistico2;
       escolha1 = "Pontos Turísticos";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("1. Número de habitantes\n");
-      printf("2. Área\n");
-      printf("3. PIB\n");
-      printf("5. Densidade\n");
-      printf("6. PIB per capita\n");
-      printf("7. Super Poder\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("1. Número de habitantes\n");
-        printf("2. Área\n");
-        printf("3. PIB\n");
-        printf("5. Densidade\n");
-        printf("6. PIB per capita\n");
-        printf("7. Super Poder\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
+      break;
     case 5:
       valor1_c1 = densidade;
       valor1_c2 = densidade2;
       escolha1 = "Densidade Populacional";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("1. Número de habitantes\n");
-      printf("2. Área\n");
-      printf("3. PIB\n");
-      printf("4. Pontos turísticos\n");
-      printf("6. PIB per capita\n");
-      printf("7. Super Poder\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("1. Número de habitantes\n");
-        printf("2. Área\n");
-        printf("3. PIB\n");
-        printf("4. Pontos turísticos\n");
-        printf("6. PIB per capita\n");
-        printf("7. Super Poder\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
+      break;
     case 6:
       valor1_c1 = pibPerCapita;
       valor1_c2 = pibPerCapita2;
       escolha1 = "PIB per capita";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("1. Número de habitantes\n");
-      printf("2. Área\n");
-      printf("3. PIB\n");
-      printf("4. Pontos turísticos\n");
-      printf("5. Densidade\n");
-      printf("7. Super Poder\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("1. Número de habitantes\n");
-        printf("2. Área\n");
-        printf("3. PIB\n");
-        printf("4. Pontos turísticos\n");
-        printf("5. Densidade\n");
-        printf("7. Super Poder\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
+      break;
     case 7:
       valor1_c1 = superPoder;
       valor1_c2 = superPoder2;
       escolha1 = "Super Poder";
-      printf("\nEscolha o segundo atributo para comparar:\n");
-      printf("1. Número de habitantes\n");
-      printf("2. Área\n");
-      printf("3. PIB\n");
-      printf("4. Pontos turísticos\n");
-      printf("5. Densidade\n");
-      printf("6. PIB per capita\n");
-      printf("Escolha: ");
-      scanf("%d", &opcao2);
-      if (opcao1 == opcao2) {
-        printf("Opçao inválida, tente novamente!\n");
-        printf("\nEscolha o segundo atributo para comparar:\n");
-        printf("1. Número de habitantes\n");
-        printf("2. Área\n");
-        printf("3. PIB\n");
-        printf("4. Pontos turísticos\n");
-        printf("5. Densidade\n");
-        printf("6. PIB per capita\n");
-        printf("Escolha: ");
-        scanf("%d", &opcao2);
-        break;
-      } else {
-        break;
-      }
+      break;
     default:
-      printf("Opção inválida. Tente novamente.\n");
+      printf("Opção inválida para o primeiro atributo. Tente novamente.\n");
+      return 1;
+  }
+
+  printf("\nEscolha o segundo atributo para comparar:\n");
+  if (opcao1 != 1) printf("1. Número de habitantes\n");
+  if (opcao1 != 2) printf("2. Área\n");
+  if (opcao1 != 3) printf("3. PIB\n");
+  if (opcao1 != 4) printf("4. Pontos turísticos\n");
+  if (opcao1 != 5) printf("5. Densidade Populacional\n");
+  if (opcao1 != 6) printf("6. PIB per capita\n");
+  if (opcao1 != 7) printf("7. Super Poder\n");
+  printf("Escolha: ");
+  scanf("%d", &opcao2);
+
+  if (opcao1 == opcao2) {
+    printf("Opção inválida. O segundo atributo deve ser diferente do primeiro.\n");
+    return 1;
   }
 
   switch (opcao2) {
@@ -395,8 +254,8 @@ int main() {
       escolha2 = "Área";
       break;
     case 3:
-      valor1_c1 = pib * 1000000000;
-      valor1_c2 = pib2 * 1000000000;
+      valor2_c1 = pib * 1000000000;
+      valor2_c2 = pib2 * 1000000000;
       escolha2 = "PIB";
       break;
     case 4:
@@ -419,6 +278,9 @@ int main() {
       valor2_c2 = superPoder2;
       escolha2 = "Super Poder";
       break;
+    default:
+      printf("Opção inválida para o segundo atributo. Tente novamente.\n");
+      return 1;
   }
 
   double soma1 = valor1_c1 + valor2_c1;
@@ -440,22 +302,22 @@ int main() {
 
   if (escolha1 == "Densidade Populacional") {
     if (valor1_c1 < valor1_c2) {
-      printf("Resultado: Carta 1 venceu (menor densidade).\n");
+      printf("Resultado: Carta 1 venceu (menor densidade populacional).\n");
     } else if (valor1_c2 < valor1_c1) {
-      printf("Resultado: Carta 2 venceu (menor densidade).\n");
+      printf("Resultado: Carta 2 venceu (menor densidade populacional).\n");
     } else {
       printf("Resultado: Empate\n");
     }
   }
   if (escolha2 == "Densidade Populacional") {
     if (valor2_c1 < valor2_c2) {
-      printf("Resultado: Carta 1 venceu (menor densidade).\n");
+      printf("Resultado: Carta 1 venceu (menor densidade populacional).\n");
       return 0;
     } else if (valor2_c2 < valor2_c1) {
-      printf("Resultado: Carta 2 venceu (menor densidade).\n");
+      printf("Resultado: Carta 2 venceu (menor densidade populacional).\n");
       return 0;
     } else {
-      printf("Resultado: Empate\n");
+      printf(C:\Users\jamir\Documents\Code bloks projetos\Nível Mestre Desafiando a lógica super trunfo2\main.cpp"Resultado: Empate\n");
     }
   }
 
