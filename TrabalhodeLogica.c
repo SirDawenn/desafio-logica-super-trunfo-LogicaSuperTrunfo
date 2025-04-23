@@ -1,5 +1,6 @@
 #include <stdio.h>
-int main (){
+int main () {
+
 //dados das cartas 1 e 2
 char estado1;
 char estado2;
@@ -84,3 +85,27 @@ scanf("%f", &pib2);
 printf("Insira a quantidade de pontos turísticos da cidade. \n"); 
 printf("Pontos turísticos: ");
 scanf(" %d", &pontosturisticos2);
+
+//Calculos de médias
+
+densidade1 = populacao1 / area1;
+densidade2 = populacao2 / area2;
+pibpercapita1 = (pib1 * 1000000000) / populacao1;
+pibpercapita2 = (pib2 * 1000000000) / populacao2;
+
+//Comparação
+
+// comparação por área
+printf("\n═════════════════════════════════════════\n");
+printf("Comparação de cartas\n");
+printf("═════════════════════════════════════════\n");
+
+if (area1 > area2) {
+    printf("Vencedor: Carta 1 (%s) venceu com área de %.2f km²!\n", nomedacidade1, area1);
+} else if (area2 > area1) {
+    printf("Vencedor: Carta 2 (%s) venceu com área de %.2f km²!\n", nomedacidade2, area2);
+} 
+
+
+return 0;
+}
