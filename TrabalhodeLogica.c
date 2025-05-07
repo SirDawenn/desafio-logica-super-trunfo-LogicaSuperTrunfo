@@ -101,7 +101,7 @@ printf("Comparação de cartas\n");
 printf("═════════════════════════════════════════\n");
 
 int opcao;
-printf("\n========= Menu de Comparacao =========\n");
+printf("\n========= Escolha o primeiro atributo =========\n");
 printf("1. Populacao\n");
 printf("2. Area\n");
 printf("3. PIB\n");
