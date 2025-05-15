@@ -1,11 +1,17 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+    unsigned int populacao1 = 6211, populacao2 = 44220;
+    unsigned int ptTuristico1 = 9650, ptTuristico2 = 16820;
+    long double densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
+    float area1 = 43.696, pib1 = 1.3, area2 = 248.219, pib2 = 3.5;
+    char pais1[50] = "Brasil", pais2[50] = "Brasil", estado1[50] = "Rio de Janeiro", estado2[50] = "São Paulo";
+    char codigoC1[5] = "C1", codigoC2[5] = "C2"; 
+    long double superPoder1, superPoder2;
+
 
 int main() {
+
+    
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
 
