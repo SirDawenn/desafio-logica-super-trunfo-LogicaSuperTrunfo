@@ -20,39 +20,39 @@ int main() {
     // PAIS, ESTADO, CIDADE e CODIGO DA CARTA 1
 
     printf("A PRIMEIRA CARTA terá o nome de qual País: ");
-    //scanf(" %[^\n]", pais1);
+    scanf(" %[^\n]", pais1);
     printf("%s \n\n", pais1);
 
     printf("Qual o nome do ESTADO: ");
-    //scanf(" %[^\n]", estado1);
+    scanf(" %[^\n]", estado1);
     printf("%s \n\n", estado1);
 
     printf("Agora o nome da CIDADE: ");
-    //scanf(" %[^\n]", cidade1);
+    scanf(" %[^\n]", cidade1);
     printf("%s \n\n", cidade1);
 
     // POPULÇÃO CARTA 1
 
     printf("Informe a POPULAÇÃO do ESTADO: ");
-    //scanf("%u", &populacao1);
+    scanf("%u", &populacao1);
     printf("%u milhões de pessoas.\n\n", populacao1);
 
     // ÁREA CARTA 1
 
     printf("Informe de quanto é a ÁREA em kM² do ESTADO: ");
-    //scanf("%.2f", &area1);
+    scanf("%f", &area1);
     printf("%.2f Km².\n\n", area1);
 
     // PIB CARTA 1
 
     printf("Qual o PIB de ESTADO: ");
-    //scanf("%.0f", &pib1);
+    scanf("%f", &pib1);
     printf("R$%.0f Trilhões.\n\n", pib1);
 
     // PONTOS TURÍSTICOS CARTA 1
 
     printf("Por último informe quantos PONTOS TURÍSTICOS possue o ESTADO: ");
-    //scanf("%d", &ptTuristico1);
+    scanf("%d", &ptTuristico1);
     printf("%d pontos de turismo.\n\n", ptTuristico1);
 
     // Calculo da DENSIDADE POPULACIONAL, PIB PER CAPTA e SUPER PODER da CARTA 1
@@ -81,39 +81,39 @@ int main() {
     // PAIS, ESTADO, CIDADE e CODIGO DA CARTA 2
 
     printf("A PRIMEIRA CARTA terá o nome de qual País: ");
-    //scanf(" %[^\n]", pais2);
+    scanf(" %[^\n]", pais2);
     printf("%s \n\n", pais2);
 
     printf("Qual o nome do ESTADO: ");
-    //scanf(" %[^\n]", estado2);
+    scanf(" %[^\n]", estado2);
     printf("%s \n\n", estado2);
 
     printf("Agora o nome da CIDADE: ");
-    //scanf(" %[^\n]", cidade2);
+    scanf(" %[^\n]", cidade2);
     printf("%s \n\n", cidade2);
 
     // POPULÇÃO CARTA 2
 
     printf("Informe a POPULAÇÃO do ESTADO: ");
-    //scanf("%u", &populacao2);
+    scanf("%u", &populacao2);
     printf("%u milhões de pessoas.\n\n", populacao2);
 
     // ÁREA CARTA 2
 
     printf("Informe de quanto é a ÁREA em kM² do ESTADO: ");
-    //scanf("%.2f", &area2);
+    scanf("%f", &area2);
     printf("%.2f Km².\n\n", area2);
 
     // PIB CARTA 2
 
     printf("Qual o PIB de ESTADO: ");
-    //scanf("%.2f", &pib2);
+    scanf("%f", &pib2);
     printf("R$%.2f Trilhões.\n\n", pib2);
 
     // PONTOS TURÍSTICOS CARTA 2
 
     printf("Por último informe quantos PONTOS TURÍSTICOS possue o ESTADO: ");
-    //scanf("%d", &ptTuristico2);
+    scanf("%d", &ptTuristico2);
     printf("%d pontos de turismo.\n\n", ptTuristico2);
 
     // Calculo da DENSIDADE POPULACIONAL, PIB PER CAPTA e SUPER PODER da CARTA 1
