@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-    unsigned int populacao1 = 6729894, populacao2 = 11895578;
-    unsigned int ptTuristico1 = 9650, ptTuristico2 = 16820;
+    unsigned int populacao1, populacao2;
+    unsigned int ptTuristico1, ptTuristico2;
     float densidadePopulacao1, densidadePopulacao2, percaptaPIB1, percaptaPIB2;
-    float area1 = 43.696, pib1 = 1153000000, area2 = 248.219, pib2 = 3500000000;
-    char pais1[50] = "Brasil", pais2[50] = "Brasil";
-    char estado1[50] = "Rio de Janeiro", estado2[50] = "São Paulo";
-    char cidade1[50] = "Duque de Caxias", cidade2[50] = "Adamantina";
+    float area1, pib1, area2, pib2;
+    char pais1[50], pais2[50];
+    char estado1[50], estado2[50];
+    char cidade1[50], cidade2[50];
     char codigoC1[5] = "C1", codigoC2[5] = "C2"; 
     unsigned int superPoder1, superPoder2;
 
