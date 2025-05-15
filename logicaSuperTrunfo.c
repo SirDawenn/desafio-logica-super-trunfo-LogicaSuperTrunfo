@@ -204,5 +204,15 @@ int main() {
 
     };
 
+    printf("O SUPOER PODER do Estado %s é MAIOR que %s?\n", estado1, estado2);
+    if (superPoder1 > superPoder2)
+    {
+        printf("%s Venceu, pois tem o maior super poder.\n\n", estado1);
+
+    } else{
+        printf("%s Venceu, pois tem o maior super poder.\n\n", estado2);
+
+    };
+
     return 0;
 }
