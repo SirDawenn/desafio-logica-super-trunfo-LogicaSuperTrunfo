@@ -142,24 +142,67 @@ int main() {
             "Para vencer escolhendo DENSIDADE POPULACIONAL, você deve ter o MENOR VALOR entre ambos atributos.\n\n"
             "VAMOS LÁ!\n\n");
 
-    
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    // COMPARAÇÃO ENTRE CARTAS
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    printf("A ÁREA TERRITORIAL do Estado %s é MAIOR que %s?\n", estado1, estado2);
+    if (area1 > area2)
+    {
+        printf("%s Venceu, pois tem a maior área territorial.\n\n", estado1);
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    } else{
+        printf("%s Venceu, pois tem a maior área territorial.\n\n", estado2);
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);*/
+    };
+
+    printf("A POPULÇÃO do Estado %s é MAIOR que %s?\n", estado1, estado2);
+    if (populacao1 > populacao2)
+    {
+        printf("%s Venceu, pois tem a maior populção.\n\n", estado1);
+
+    } else{
+        printf("%s Venceu, pois tem a maior população.\n\n", estado2);
+
+    };
+
+    printf("O número de PONTOS TURÍSTICOS do Estado %s é MAIOR que %s?\n", estado1, estado2);
+    if (ptTuristico1 > ptTuristico2)
+    {
+        printf("%s Venceu, pois tem mais pontos turísticos.\n\n", estado1);
+
+    } else{
+        printf("%s Venceu, pois tem mais pontos turísticos.\n\n", estado2);
+
+    };
+
+    printf("O PIB do Estado %s é maior que %s?\n", estado1, estado2);
+    if (pib1 > pib2)
+    {
+        printf("%s Venceu, pois tem o maior Produto Intero Bruto.\n\n", estado1);
+
+    } else{
+        printf("%s Venceu, pois tem o maior Produto Interno Bruto.\n\n", estado2);
+
+    };
+
+    printf("O PIB PER CAPTA do Estado %s é MAIOR que %s?\n", estado1, estado2);
+    if (percaptaPIB1 > percaptaPIB2)
+    {
+        printf("%s Venceu, pois tem o maior PIB PER CAPTA.\n\n", estado1);
+
+    } else{
+        printf("%s Venceu, pois tem o maior PIB PER CAPTA.\n\n", estado2);
+
+    };
+
+    printf("A DENSIDADE POPULACIONAL do Estado %s é MENOR que %s?\n", estado1, estado2);
+    if (densidadePopulacao1 > densidadePopulacao2)
+    {
+        printf("%s Venceu, pois tem a MENOR DENSIDADE POPULACIONAL.\n\n", estado1);
+
+    } else{
+        printf("%s Venceu, pois tem a MENOR DENSIDADE POPULACIONAL.\n\n", estado2);
+
+    };
 
     return 0;
 }
