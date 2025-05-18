@@ -176,8 +176,12 @@ int main() {
 
             if (pib1 > pib2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (pib1 < pib2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!\n\n");
             };
         break;
 
@@ -188,8 +192,12 @@ int main() {
 
             if (populacao1 > populacao2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (populacao1 < populacao2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!");
             };
         break;
 
@@ -200,8 +208,12 @@ int main() {
 
             if (area1 > area2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (area1 < area2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!");
             };
         break;
 
@@ -212,8 +224,12 @@ int main() {
 
             if (ptTuristico1 > ptTuristico2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (ptTuristico1 < ptTuristico2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!");
             };
         break;
 
@@ -224,8 +240,12 @@ int main() {
 
             if (percaptaPIB1 > percaptaPIB2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (percaptaPIB1 < percaptaPIB2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!");
             };
         break;
 
@@ -236,8 +256,12 @@ int main() {
 
             if (densidadePopulacao1 < densidadePopulacao2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (densidadePopulacao1 > densidadePopulacao2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!");
             };
         break;
 
@@ -248,8 +272,12 @@ int main() {
 
             if (superPoder1 > superPoder2){
                 printf("%s (Carta 1).\n\n", estado1);
-            } else{
+
+            } else if (superPoder1 < superPoder2){
                 printf("%s (Carta 2).\n\n", estado2);
+
+            } else {
+                printf("Ninguem venceu, é um empate!");
             };
         break;
 
